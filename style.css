@@ -1,0 +1,14 @@
+body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; }
+.panel { max-width: 1000px; margin: 50px auto; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+.card { border: 1px solid #ddd; padding: 15px; border-radius: 6px; text-align: center; }
+
+/* Admin Buttons */
+.btn-on { background: #28a745; color: white; border: none; padding: 8px; cursor: pointer; }
+.btn-off { background: #dc3545; color: white; border: none; padding: 8px; cursor: pointer; }
+
+/* User Alarm Overlay */
+#alarm-overlay { 
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(220, 53, 69, 0.9); color: white; text-align: center; padding-top: 100px; 
+}

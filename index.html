@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Team Alert</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container" class="panel">
+        <h2>Team Portal Login</h2>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="login()">Enter Dashboard</button>
+    </div>
+
+    <!-- Admin Dashboard (Hidden by default) -->
+    <div id="admin-dashboard" class="panel" style="display:none;">
+        <header>
+            <h1>Admin Control Panel</h1>
+            <p>Welcome, <span id="admin-name"></span></p>
+        </header>
+        <div id="user-grid" class="grid">
+            <!-- User cards will be generated here by JS -->
+        </div>
+    </div>
+
+    <!-- User Dashboard (Hidden by default) -->
+    <div id="user-dashboard" class="panel" style="display:none;">
+        <div id="alarm-overlay" class="alarm-active">
+            <h1 id="notif-title">ATTENTION REQUIRED</h1>
+            <p id="notif-message">Admin has a message for you...</p>
+            <button class="stop-btn" onclick="turnOffSelf()">I AM HERE (STOP ALARM)</button>
+        </div>
+        <div class="settings">
+            <h3>Settings</h3>
+            <label>Choose Alarm Tone:</label>
+            <select id="tone-selector">
+                <option value="classic.mp3">Classic Bell</option>
+                <option value="digital.mp3">Digital Beep</option>
+                <option value="urgent.mp3">Urgent Siren</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
